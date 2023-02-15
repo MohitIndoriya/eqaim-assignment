@@ -1,6 +1,6 @@
 # eqaim-assignment
 # #step1
-To start express server the project first go into server and hit the command 
+To start express server  first go into server and hit the command 
 npm i 
 npm start
 # # step2
