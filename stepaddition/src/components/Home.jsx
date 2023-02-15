@@ -11,10 +11,16 @@ export default function Home() {
         setData({...data,[e.target.name]:e.target.value})
     }
    async function handleSubmit(){
+    let number=/^[1-9][0-9]*$/
+    console.log(data.num1.match(number))
+        if(data.num1.match(number)&&data.num2.match(number)){
 
-     let res= await  axios.post("http://localhost:8080/",data)
-     console.log(res)
-     setans([...res.data])
+            let res= await  axios.post("http://localhost:8080/",data)
+            console.log(res)
+            setans([...res.data])
+        }else{
+            alert("invalid number")
+        }
      
     }
   return (
